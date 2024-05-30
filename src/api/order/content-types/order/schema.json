@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uuid": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "token": {
+      "type": "string",
+      "private": true,
+      "unique": true
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "in-pending",
+        "unpaid",
+        "paid",
+        "processing",
+        "completed",
+        "aborted"
+      ]
+    },
+    "data": {
+      "type": "json"
+    },
+    "metadata": {
+      "type": "json"
+    },
+    "note": {
+      "type": "text",
+      "private": true
+    }
+  }
+}
